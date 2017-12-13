@@ -1,35 +1,20 @@
-//1. Get the express class
+//1. Import
 var express = require('express');
 var path = require('path');
 var routes = require('./routes/route.js');
 
-//2. Initiate and assign to an app object
+//2. Initiate
 var app = express();
 
-//3. Tell express which view template we are going to use
+
+//3. Configure
 app.set("view engine","ejs");
-
-//3.1 Let us tell express the asset/resource folder where images, css, js reside
 app.use(express.static(path.join(__dirname, 'public')));
+app.get("/",routes.home);
 
-//4. Route 1: Which page to render when express '/' route is called
-app.get("/",
 
-    //call back function to be called when '/' route is called
-    routes.home
-);
-
-//4.1 Route 2: for localhost:port/city link, we define another route
-app.get("/:city",
-
-    //call back function to be called when "/city" is called
-    routes.city
-);
-
-//5. Decide the port
+//5. Listen
 var port = process.env.PORT || 8080;
-
-//6. Start the server of express object to listen to port
 var server = app.listen(port,
     function(request,response)
     {

@@ -1,0 +1,1 @@
+This is a basic template with express to start a new nodejs application. 
