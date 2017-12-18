@@ -1,0 +1,57 @@
+<div class="container-fluid table-condensed">
+  <!--Style Ref: https://codepen.io/tutweb/pen/waRYOM-->
+    <!-- <div class="row no-gutters">      
+        <div class="col-xs-6 col-sm-3 "><br>BTCUSD</div>
+        <div class="col-xs-6 col-sm-3 "><span>B: 10,80,735</span><br><span>S: 10,45,233</span></div>
+        <div class="col-xs-6 col-sm-3 "><span>B: 10,80,735</span><br><span>S: 10,45,233</span></div>
+        <div class="col-xs-6 col-sm-3 "><span>B: 10,80,735</span><br><span>S: 10,45,233</span></div>
+      </div>
+    </div> -->    
+<table id="indianExchangesTableID" class="container-fluid table-condensed table-bordered table-dark">
+  <thead>
+    <tr class="row no-gutters">
+      <th class="col-xs-6 col-sm-3" scope="col">#<pre>
+        </pre></th>
+      <th class="col-xs-6 col-sm-3" scope="col">Koinex<pre>A
+        </pre></th>
+      <th class="col-xs-6 col-sm-3" scope="col">Others<pre>B
+        </pre></th>
+      <th class="col-xs-6 col-sm-3" scope="col">Difference<pre>A-B
+        </pre></th>
+    </tr>
+  </thead>
+<tbody>
+  <tr class="row no-gutters">
+    <th class="col-xs-6 col-sm-3" scope="row no-gutters"><br>BTCINR</th>
+    <td class="col-xs-6 col-sm-3" ><br><span style="color:grey;">B: </span><span id='koinex_btc_buy_id'>NA</span><br><span style="color:grey;">S: </span><span id='koinex_btc_sell_id'>NA</span></td>
+    <td class="col-xs-6 col-sm-3" ><span style="color:grey;">Coinsecure</span><br><span style="color:grey;">B: </span><span id='coinsecure_btc_buy_id'>NA</span><br><span style="color:grey;">S: </span><span id='coinsecure_btc_sell_id'>NA</span></td>
+    <td class="col-xs-6 col-sm-3" ><br><span style="color:grey;">B: </span><span id='difference_btc_buy_id' style='color:yellow;'>NA</span><br><span style="color:grey;">S: </span><span id='difference_btc_sell_id' style='color:yellow;'>NA</span></td>
+  </tr>
+  <tr class="row no-gutters">
+      <th class="col-xs-6 col-sm-3" scope="row no-gutters"><br>ETHINR</th>
+      <td class="col-xs-6 col-sm-3" ><br><span style="color:grey;">B: </span><span id='koinex_eth_buy_id'>NA</span><br><span style="color:grey;">S: </span><span id='koinex_eth_sell_id'>NA</span></td>
+      <td class="col-xs-6 col-sm-3" ><span style="color:grey;">EthexIndia</span><br><span style="color:grey;">B: </span><span id='ethex_eth_buy_id'>NA</span><br><span style="color:grey;">S: </span><span id='ethex_eth_sell_id'>NA</span></td>
+      <td class="col-xs-6 col-sm-3" ><br><span style="color:grey;">B: </span><span id='difference_eth_buy_id' style='color:yellow;'>NA</span><br><span style="color:grey;">S: </span><span id='difference_eth_sell_id' style='color:yellow;'>NA</span></td>
+    </tr>
+  <tr class="row no-gutters">
+    <th class="col-xs-6 col-sm-3" scope="row no-gutters"><br>LTCINR</th>
+    <td class="col-xs-6 col-sm-3" ><br><span style="color:grey;">B: </span><span id='koinex_ltc_buy_id'>NA</span><br><span style="color:grey;">S: </span><span id='koinex_ltc_sell_id'>NA</span></td>
+    <td class="col-xs-6 col-sm-3" >--</td>
+    <td class="col-xs-6 col-sm-3" >--</td>
+  </tr>
+  <tr class="row no-gutters">
+      <th class="col-xs-6 col-sm-3" scope="row no-gutters"><br>BCHINR</th>
+      <td class="col-xs-6 col-sm-3" ><br><span style="color:grey;">B: </span><span id='koinex_bch_buy_id'>NA</span><br><span style="color:grey;">S: </span><span id='koinex_bch_sell_id'>NA</span></td>
+      <td class="col-xs-6 col-sm-3" >--</td>
+      <td class="col-xs-6 col-sm-3" >--</td>  
+  </tr>          
+  <tr class="row no-gutters">
+      <th class="col-xs-6 col-sm-3" scope="row no-gutters"><br>XRPINR</th>
+      <td class="col-xs-6 col-sm-3" ><br><span style="color:grey;">B: </span><span id='koinex_xrp_buy_id'>NA</span><br><span style="color:grey;">S: </span><span id='koinex_xrp_sell_id'>NA</span></td>
+      <td class="col-xs-6 col-sm-3" >--</td>
+      <td class="col-xs-6 col-sm-3" >--</td>  
+  </tr>            
+</tbody>
+</table>
+<div id='tickerTime' style='color:blue; font-size:12px;'>Time</div>
+</div>

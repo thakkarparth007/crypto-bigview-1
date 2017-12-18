@@ -1,0 +1,16 @@
+.table-condensed
+{
+    font-size: 11px;
+    line-height: 1.4;
+    font-family: "Roboto Regular";
+}
+/* no-gutters Class Rules */
+.row.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+ }
+ .row.no-gutters > [class^="col-"],
+ .row.no-gutters > [class*=" col-"] {
+    padding-right: 0;
+    padding-left: 0;
+ }

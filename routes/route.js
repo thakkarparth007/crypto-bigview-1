@@ -5,8 +5,8 @@ exports.home = function(request,response)
     response.render("home",
         {
             //variable we will use in ejs template and its value..
-            title:"Major cities",
-            headline:"We believe every city has a shitty store to say"
+            title:"Tradingview Widgets",
+            headline:"Tradingview Widgets",
         }
     );
 }

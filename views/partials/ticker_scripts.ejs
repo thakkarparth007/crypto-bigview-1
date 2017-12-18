@@ -1,0 +1,62 @@
+<script>
+        start();
+        
+        function start()
+        {
+            $.ajax({
+            url: "https://crypto-ticker-1.herokuapp.com/ticker",
+            dataType: "jsonp",
+            jsonpCallback: "logResults"
+            });
+            setTimeout(start, 20000);
+        }
+
+        function logResults(json){
+            console.log(json);
+            //console.log(json.koinex.BTCINR.Buy);
+            $('#koinex_btc_buy_id').text(OSREC.CurrencyFormatter.format(parseFloat(json.koinex.BTCINR.Buy), { currency: 'INR' }));
+            $('#koinex_btc_sell_id').text(OSREC.CurrencyFormatter.format(parseFloat(json.koinex.BTCINR.Sell), { currency: 'INR' }));
+            $('#koinex_eth_buy_id').text(OSREC.CurrencyFormatter.format(parseFloat(json.koinex.ETHINR.Buy), { currency: 'INR' }));
+            $('#koinex_eth_sell_id').text(OSREC.CurrencyFormatter.format(parseFloat(json.koinex.ETHINR.Sell), { currency: 'INR' }));
+            $('#koinex_ltc_buy_id').text(OSREC.CurrencyFormatter.format(parseFloat(json.koinex.LTCINR.Buy), { currency: 'INR' }));
+            $('#koinex_ltc_sell_id').text(OSREC.CurrencyFormatter.format(parseFloat(json.koinex.LTCINR.Sell), { currency: 'INR' }));
+            $('#koinex_bch_buy_id').text(OSREC.CurrencyFormatter.format(parseFloat(json.koinex.BCHINR.Buy), { currency: 'INR' }));
+            $('#koinex_bch_sell_id').text(OSREC.CurrencyFormatter.format(parseFloat(json.koinex.BCHINR.Sell), { currency: 'INR' }));  
+            $('#koinex_xrp_buy_id').text(OSREC.CurrencyFormatter.format(parseFloat(json.koinex.XRPINR.Buy), { currency: 'INR' }));
+            $('#koinex_xrp_sell_id').text(OSREC.CurrencyFormatter.format(parseFloat(json.koinex.XRPINR.Sell), { currency: 'INR' }));                        
+
+            $('#coinsecure_btc_buy_id').text(OSREC.CurrencyFormatter.format(parseFloat(json.coinsecure.BTCINR.Buy), { currency: 'INR' }));
+            $('#coinsecure_btc_sell_id').text(OSREC.CurrencyFormatter.format(parseFloat(json.coinsecure.BTCINR.Sell), { currency: 'INR' }));
+
+            $('#ethex_eth_buy_id').text(OSREC.CurrencyFormatter.format(parseFloat(json.ethexindia.ETHINR.Buy), { currency: 'INR' }));
+            $('#ethex_eth_sell_id').text(OSREC.CurrencyFormatter.format(parseFloat(json.ethexindia.ETHINR.Sell), { currency: 'INR' })); 
+            
+            $('#difference_btc_buy_id').text( OSREC.CurrencyFormatter.format((parseFloat(json.koinex.BTCINR.Buy) - parseFloat(json.coinsecure.BTCINR.Buy)), { currency: 'INR' }) );
+            $('#difference_btc_sell_id').text( OSREC.CurrencyFormatter.format((parseFloat(json.koinex.BTCINR.Sell) - parseFloat(json.coinsecure.BTCINR.Sell)), { currency: 'INR' }) );
+
+            $('#difference_eth_buy_id').text( OSREC.CurrencyFormatter.format((parseFloat(json.koinex.ETHINR.Buy) - parseFloat(json.ethexindia.ETHINR.Buy)), { currency: 'INR' }) );
+            $('#difference_eth_sell_id').text( OSREC.CurrencyFormatter.format((parseFloat(json.koinex.ETHINR.Sell) - parseFloat(json.ethexindia.ETHINR.Sell)), { currency: 'INR' })  );            
+
+            //$('#tickerTime').text(json.time);
+            //$('#tickerTime').text('Updated at: ' + moment.unix(parseInt(json.time)).format('MMMM Do YYYY, h:mm:ss a'));
+            $('#tickerTime').text(toPeriodFormat(new Date(parseInt(json.time))));
+        } 
+
+        function toPeriodFormat(date) {
+        var day = date.getDate();
+        var month = date.getMonth();
+        var year = date.getFullYear();
+        var hours = date.getHours(),
+        minutes = date.getMinutes(),
+        ampm = hours >= 12 ? 'pm' : 'am';
+
+        hours = hours % 12;
+        hours = hours ? hours : 12; // the hour '0' should be '12'
+
+        minutes = minutes < 10 ? '0'+minutes : minutes;
+        var strTime = day + '/' + (month+1) + '/' + year + ' ' + hours + ':' + minutes + ' ' + ampm;
+
+        return strTime;
+        }
+
+</script>
