@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-sm"> 
+      <div class="row">Not working div
+          <script src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js">
+            {
+              "symbols": [
+              {
+                "description": "BTCUSD",
+                "proName": "BITFINEX:BTCUSD"
+              }
+            ]
+            } 
+            </script> 
+        </div>  
+  </div>
+  <div class="col-sm">
+    USD INR conv
+  </div>
+</div>
+<div class="row" style="height:270px">
+<script>
+
+new TradingView.widget({
+    "autosize": true,
+    "symbol": "BITFINEX:BTCUSD",
+    "interval": "60",
+    "timezone": "Asia/Kolkata",
+    "theme": "Dark",
+    "style": "1",
+    "locale": "en",
+    "toolbar_bg": "#f1f3f6",
+    "enable_publishing": false,
+    "save_image": false,
+    "hideideas": true,
+    "studies": [
+      "RSI@tv-basicstudies",
+      //"MACD@tv-basicstudies"
+    ]
+  });
+
+//$('#btcusdID').html(btcusdelement);
+
+</script></div>  

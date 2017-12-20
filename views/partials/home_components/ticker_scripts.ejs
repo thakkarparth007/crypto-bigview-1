@@ -31,11 +31,11 @@
             $('#ethex_eth_buy_id').text(OSREC.CurrencyFormatter.format(parseFloat(json.ethexindia.ETHINR.Buy), { currency: 'INR' }));
             $('#ethex_eth_sell_id').text(OSREC.CurrencyFormatter.format(parseFloat(json.ethexindia.ETHINR.Sell), { currency: 'INR' })); 
             
-            $('#difference_btc_buy_id').text( OSREC.CurrencyFormatter.format((parseFloat(json.koinex.BTCINR.Buy) - parseFloat(json.coinsecure.BTCINR.Buy)), { currency: 'INR' }) );
-            $('#difference_btc_sell_id').text( OSREC.CurrencyFormatter.format((parseFloat(json.koinex.BTCINR.Sell) - parseFloat(json.coinsecure.BTCINR.Sell)), { currency: 'INR' }) );
+            $('#difference_btc_buy_id').text( OSREC.CurrencyFormatter.format((parseFloat(json.koinex.BTCINR.Sell) - parseFloat(json.coinsecure.BTCINR.Buy)), { currency: 'INR' }) );
+            $('#difference_btc_sell_id').text( OSREC.CurrencyFormatter.format((parseFloat(json.coinsecure.BTCINR.Sell) - parseFloat(json.koinex.BTCINR.Buy)), { currency: 'INR' }) );
 
-            $('#difference_eth_buy_id').text( OSREC.CurrencyFormatter.format((parseFloat(json.koinex.ETHINR.Buy) - parseFloat(json.ethexindia.ETHINR.Buy)), { currency: 'INR' }) );
-            $('#difference_eth_sell_id').text( OSREC.CurrencyFormatter.format((parseFloat(json.koinex.ETHINR.Sell) - parseFloat(json.ethexindia.ETHINR.Sell)), { currency: 'INR' })  );            
+            $('#difference_eth_buy_id').text( OSREC.CurrencyFormatter.format((parseFloat(json.koinex.ETHINR.Sell) - parseFloat(json.ethexindia.ETHINR.Buy)), { currency: 'INR' }) );
+            $('#difference_eth_sell_id').text( OSREC.CurrencyFormatter.format((parseFloat(json.ethexindia.ETHINR.Sell) - parseFloat(json.koinex.ETHINR.Buy)), { currency: 'INR' })  );            
 
             //$('#tickerTime').text(json.time);
             //$('#tickerTime').text('Updated at: ' + moment.unix(parseInt(json.time)).format('MMMM Do YYYY, h:mm:ss a'));

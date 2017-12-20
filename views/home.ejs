@@ -20,27 +20,39 @@
 
   <div class="container-fluid">
     <div class="container-fluid">
+        <div class="row">
+            <script src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js">
+              {
+                "symbols": [
+                {
+                  "description": "BTCUSD",
+                  "proName": "BITFINEX:BTCUSD"
+                }
+              ]
+              } 
+              </script> 
+          </div>        
       <div class="row">
-      <div class="col-sm-4" style="height:400px">
-          <% include partials/tradingview_btcusd.ejs %>
+      <div class="col-sm-4" style="height:300px">
+          <% include partials/home_components/tradingview_btcusd.ejs %>
       </div>
-      <div class="col-sm-4" style="height:400px">
-          <% include partials/tradingview_ethusd.ejs %>
+      <div class="col-sm-4" style="height:300px">
+          <% include partials/home_components/tradingview_ethusd.ejs %>
       </div>
-      <div class="col-sm-4" style="height:400px">
-          <% include partials/tradingview_ltcusd.ejs %>
+      <div class="col-sm-4" style="height:300px">
+          <% include partials/home_components/tradingview_ltcusd.ejs %>
       </div>
       </div>
       <br>
       <div class="row">
-      <div class="col-sm-4" style="height:400px">
-          <% include partials/tradingview_bchusd.ejs %>
+      <div class="col-sm-4" style="height:300px">
+          <% include partials/home_components/tradingview_bchusd.ejs %>
       </div>
-      <div class="col-sm-4" style="height:400px">
-          <% include partials/tradingview_xrpusd.ejs %>
+      <div class="col-sm-4" style="height:300px">
+          <% include partials/home_components/tradingview_xrpusd.ejs %>
       </div>
-        <div class="col-sm-4" style="height:400px">
-          <% include partials/indian_exchanges.ejs %>
+        <div class="col-sm-4" style="height:300px">
+          <% include partials/home_components/indian_exchanges.ejs %>
         </div>
       </div>      
     </div>
@@ -48,7 +60,7 @@
 
 <% include partials/jsincludes.ejs %>
 
-<% include partials/ticker_scripts.ejs %>
+<% include partials/home_components/ticker_scripts.ejs %>
 
 </body>
 </html>
