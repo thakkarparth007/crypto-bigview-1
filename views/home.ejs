@@ -13,39 +13,47 @@
 </head>
 <body>
   
-  <% include partials/menu.ejs%>
+<% include partials/menu.ejs%>
 
-  <br/>
-
-
-  <div class="container-fluid">
-    <div class="container-fluid">
-      
+<div class="container-fluid">
+  <div class="row">
+    <div class="col" style="background-color:beige;">
+    Indian Tickers
+    </div>
+    <div class="col-11" style="background-color:aliceblue;">
       <div class="row">
-      <div class="col-sm-4" style="height:400px; background-color:cadetblue;">
+        <div class="col-sm-4" style="height:400px; background-color:cadetblue;">
           <% include partials/home_components/tradingview_btcusd.ejs %>
-      </div>
-      <div class="col-sm-4" style="height:400px; background-color:burlywood;">
+        </div>
+        <div class="col-sm-4" style="height:400px; background-color:burlywood;">
           <% include partials/home_components/tradingview_ethusd.ejs %>
-      </div>
-      <div class="col-sm-4" style="height:400px; background-color:lightblue;">
+        </div>
+        <div class="col-sm-4" style="height:400px; background-color:lightblue;">
           <% include partials/home_components/tradingview_ltcusd.ejs %>
-      </div>
+        </div>
       </div>
       <br>
       <div class="row">
-      <div class="col-sm-4" style="height:400px; background-color:dimgray;">
+        <div class="col-sm-4" style="height:400px; background-color:dimgray;">
           <% include partials/home_components/tradingview_bchusd.ejs %>
-      </div>
-      <div class="col-sm-4" style="height:400px; background-color:lightpink;">
+        </div>
+        <div class="col-sm-4" style="height:400px; background-color:lightpink;">
           <% include partials/home_components/tradingview_xrpusd.ejs %>
-      </div>
-        <div class="col-sm-4" style="height:400px; background-color:olive;">
+        </div>
+        <div class="col-sm-4" style="height:400px; background-color:khaki;">
           <% include partials/home_components/indian_exchanges.ejs %>
         </div>
       </div>      
     </div>
   </div>
+</div>
+
+
+
+
+
+
+
 
 <% include partials/jsincludes.ejs %>
 

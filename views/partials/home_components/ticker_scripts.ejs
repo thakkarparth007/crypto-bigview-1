@@ -43,6 +43,11 @@
 
 
             //Bitfinex tickers
+            $('#bitfinex_btc_usd').text( OSREC.CurrencyFormatter.format(parseFloat(json.bitfinex.BTCUSD), { currency: 'USD' }) );
+            $('#bitfinex_eth_usd').text( OSREC.CurrencyFormatter.format(parseFloat(json.bitfinex.ETHUSD), { currency: 'USD' }) );
+            $('#bitfinex_ltc_usd').text( OSREC.CurrencyFormatter.format(parseFloat(json.bitfinex.LTCUSD), { currency: 'USD' }) );
+            $('#bitfinex_bch_usd').text( OSREC.CurrencyFormatter.format(parseFloat(json.bitfinex.BCHUSD), { currency: 'USD' }) );
+            $('#bitfinex_xrp_usd').text( OSREC.CurrencyFormatter.format(parseFloat(json.bitfinex.XRPUSD), { currency: 'USD' }) );            
             $('#bitfinex_btc_inr').text( OSREC.CurrencyFormatter.format(parseFloat(json.bitfinex.BTCINR), { currency: 'INR' }) );
             $('#bitfinex_eth_inr').text( OSREC.CurrencyFormatter.format(parseFloat(json.bitfinex.ETHINR), { currency: 'INR' }) );
             $('#bitfinex_ltc_inr').text( OSREC.CurrencyFormatter.format(parseFloat(json.bitfinex.LTCINR), { currency: 'INR' }) );
