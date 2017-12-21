@@ -40,6 +40,14 @@
             //$('#tickerTime').text(json.time);
             //$('#tickerTime').text('Updated at: ' + moment.unix(parseInt(json.time)).format('MMMM Do YYYY, h:mm:ss a'));
             $('#tickerTime').text(toPeriodFormat(new Date(parseInt(json.time))));
+
+
+            //Bitfinex tickers
+            $('#bitfinex_btc_inr').text( OSREC.CurrencyFormatter.format(parseFloat(json.bitfinex.BTCINR), { currency: 'INR' }) );
+            $('#bitfinex_eth_inr').text( OSREC.CurrencyFormatter.format(parseFloat(json.bitfinex.ETHINR), { currency: 'INR' }) );
+            $('#bitfinex_ltc_inr').text( OSREC.CurrencyFormatter.format(parseFloat(json.bitfinex.LTCINR), { currency: 'INR' }) );
+            $('#bitfinex_bch_inr').text( OSREC.CurrencyFormatter.format(parseFloat(json.bitfinex.BCHINR), { currency: 'INR' }) );
+            $('#bitfinex_xrp_inr').text( OSREC.CurrencyFormatter.format(parseFloat(json.bitfinex.XRPINR), { currency: 'INR' }) );
         } 
 
         function toPeriodFormat(date) {
